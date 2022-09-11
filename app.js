@@ -5,7 +5,7 @@ import fs from 'fs';
 
 
 const app = express();
-const port = '8000';
+const port = process.env.PORT || '8000';
  
 app.get('/student/getDetails',(req,res) =>{
     fs.readFile('./API/userapi.json',"utf-8",(err,data) =>{
